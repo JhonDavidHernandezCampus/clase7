@@ -11,15 +11,28 @@
     <?php
     //condicionales
     $hora = date('H');
-    echo $hora;
+
+
+    $usuario = "roo";
+    $clave = "123   5";
+    if ($usuario == "root" and $clave == "12345") {
+        echo "";
+        echo "<div class='position-relative'>
+            <h2 class='text text-primary'>Sea Usted bienbenido usuario $usuario <br></h2>
+            <div class='position-absolute top-0 start-50 translate-middle-x'>
+                <img src='img/Logo-UTS-1.png' alt='' class='w-50 '>
+            </div>
+        </div>";
+    }elseif($usuario != "root" and $clave != "12345"){
+        echo "El usuario y la contraseñs son incorrectas";
+    }elseif($usuario != "root"){
+        echo "El usuario es Incorrecto";
+    }else {
+        echo "La contraseña es Incorrecta";
+    }
 
     if ($hora > 13 and $hora < 18){
-        $usuario = "root";
-        $clave = "12345";
-        if ($usuario == "root" and $clave == "12345") {
-            echo "Sea Usted bienbenido usuario $usuario <br>";
-            echo 
-        }
+       
 
     }else{
         echo "<p class='text text-danger'> Lo siento pero no puedes ingresar en esta hora. Intentalo mas adelante</p>";
@@ -30,7 +43,5 @@
 
    
     ?>
-
-
 </body>
 </html>
